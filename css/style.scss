@@ -166,6 +166,38 @@ h4 {
 			line-height: $headerHeight;
 			padding-left: 20px;
 		}
+		.menu {
+			position: absolute;
+			top: 0;
+			right: 0;
+			width: $headerHeight;
+			height:  $headerHeight;
+			cursor: pointer;
+			i {
+				position: absolute;
+				width: 24px;
+				height: 4px;
+				top: 28px;
+				right: 16px;
+				background-color: #ffffff;
+			}
+			i::before {
+				content: '';
+				position: absolute;
+				width: 24px;
+				height: 4px;
+				top: -10px;
+				background-color: #ffffff;
+			}
+			i::after {
+				content: '';
+				position: absolute;
+				width: 24px;
+				height: 4px;
+				top: 10px;
+				background-color: #ffffff;
+			}
+		}
 	}
 	.main {
 		position: absolute;
