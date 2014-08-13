@@ -1,17 +1,21 @@
-
-	<div id="one" class="main-block exclusive-gifts" >
+<!-- main.html -->
+	<div id="one" class="main-block exclusive-gifts" 
+		ng-click="setPage('exclusive')">
 		<h1>{{main.data.exclusiveGifts}}</h1>
 		<h4>exclusive gifts</h4>
 	</div>
-	<div id="two" class="main-block my-recycles">
+	<div id="two" class="main-block my-recycles"
+		ng-click="setPage('mine')">
 		<h1>{{main.data.myRecycles}}</h1>
 		<h4>my recycles</h4>
 	</div>
-	<div id="three" class="main-block nearby-gifts">
+	<div id="three" class="main-block nearby-gifts"
+		ng-click="setPage('nearby')">
 		<h1>{{main.data.nearbyGifts}}</h1>
 		<h4>nearby gifts</h4>
 	</div>
-	<div id="four" class="main-block new-recycles">
+	<div id="four" class="main-block new-recycles"
+		ng-click="setPage('new')">
 		<h1>+</h1>
 		<h4>new recycles</h4>
 	</div>

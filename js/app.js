@@ -44,8 +44,8 @@
 		    }
 		});*/
 
-		$scope.goToExclusiveGifts = function(){
-			$state.go('goToExclusiveGifts');
+		$scope.setPage = function (page) {
+		    $state.transitionTo(page);
 		};
 	});
 	
@@ -65,11 +65,40 @@
 				controllerAs: 'main'
 			})
 
-			.state('exclusiveGifts', {
+			.state('exclusive', {
 				url: '/exclusive-gifts',
-				templateUrl: 'templates/exclusive-gifts.html'
+				templateUrl: 'templates/exclusive-gifts.html',
+				controller: 'MainController',
+				controllerAs: 'main'
+			})
+
+			.state('mine', {
+				url: '/my-recycles',
+				templateUrl: 'templates/my-recycles.html',
+				controller: 'MainController',
+				controllerAs: 'main'
+			})
+
+			.state('nearby', {
+				url: '/nearby-gifts',
+				templateUrl: 'templates/nearby-gifts.html',
+				controller: 'MainController',
+				controllerAs: 'main'
+			})
+
+
+			.state('new', {
+				url: '/new-recycle',
+				templateUrl: 'templates/new-recycle.html',
+				controller: 'MainController',
+				controllerAs: 'main'
 			});
 
 		$urlRouterProvider.otherwise('/main');
-	});
+	})
+
+	.run(['$state', function ($state) {
+	   $state.transitionTo('exclusive');
+	}])
+
 })()
