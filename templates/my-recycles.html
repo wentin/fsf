@@ -2,7 +2,9 @@
 <div class="view-wrapper my-recycles" ng-class="{'menu-active': view.menuActive}">		
 	<header>
 		<h2>my recycles	</h2>
-		<div class="menu" ng-click="view.menuActive = !view.menuActive"><i></i></div>
+		<div class="menu" 
+			ng-class="{'menu-active': view.menuActive}" 
+			ng-click="view.menuActive = !view.menuActive"><i></i></div>
 	</header>
 	<div class="main">
 			

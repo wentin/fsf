@@ -193,6 +193,7 @@ h4 {
 				top: 28px;
 				right: 16px;
 				background-color: #ffffff;
+				transition: all $animation ease-in;
 			}
 			i::before {
 				content: '';
@@ -201,6 +202,7 @@ h4 {
 				height: 4px;
 				top: -10px;
 				background-color: #ffffff;
+				transition: all $animation ease-in;
 			}
 			i::after {
 				content: '';
@@ -209,6 +211,20 @@ h4 {
 				height: 4px;
 				top: 10px;
 				background-color: #ffffff;
+				transition: all $animation ease-in;
+			}
+		}
+		.menu.menu-active {
+			i {
+				background-color: rgba(white, 0);
+			}
+			i::before {
+				top: 0;
+				transform: rotate(-45deg);
+			}
+			i::after {
+				top: 0;
+				transform: rotate(45deg);
 			}
 		}
 	}

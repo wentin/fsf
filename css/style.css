@@ -194,21 +194,32 @@ h4 {
   height: 4px;
   top: 28px;
   right: 16px;
-  background-color: #ffffff; }
+  background-color: #ffffff;
+  transition: all 0.3s ease-in; }
 .view header .menu i::before {
   content: '';
   position: absolute;
   width: 24px;
   height: 4px;
   top: -10px;
-  background-color: #ffffff; }
+  background-color: #ffffff;
+  transition: all 0.3s ease-in; }
 .view header .menu i::after {
   content: '';
   position: absolute;
   width: 24px;
   height: 4px;
   top: 10px;
-  background-color: #ffffff; }
+  background-color: #ffffff;
+  transition: all 0.3s ease-in; }
+.view header .menu.menu-active i {
+  background-color: rgba(255, 255, 255, 0); }
+.view header .menu.menu-active i::before {
+  top: 0;
+  transform: rotate(-45deg); }
+.view header .menu.menu-active i::after {
+  top: 0;
+  transform: rotate(45deg); }
 .view .main {
   position: absolute;
   margin: 0;
