@@ -6,6 +6,8 @@ $green: #03C796;
 
 $headerHeight : 60px;
 $footerHeight : 60px;
+
+$animation: 0.3s;
 @mixin icomoon($content) {
 	content: $content;
   	font-family: 'icomoon';
@@ -146,18 +148,29 @@ h4 {
 	border: solid 2px rgba(0,0,0,1);
 	-webkit-box-shadow: inset 0 1px 0px rgba(255,255,255,0.3);
 	box-shadow: inset 0 1px 0px rgba(255,255,255,0.3);
-	&.exclusive-gifts {
-		background-color: $red;
+	.view-wrapper {
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		transition: all $animation ease-in;
+		&.menu-active {
+			transform: translateX(-75%);
+		}
+		&.exclusive-gifts {
+			background-color: $red;
+		}
+		&.my-recycles {
+			background-color: $green;
+		}
+		&.nearby-gifts {
+			background-color: $purple;
+		}
+		&.new-recycles {
+			background-color: $yellow;
+		}
 	}
-	&.my-recycles {
-		background-color: $green;
-	}
-	&.nearby-gifts {
-		background-color: $purple;
-	}
-	&.new-recycles {
-		background-color: $yellow;
-	}
+	
+	
 	header {
 		height: $headerHeight; 
 		h2 {
@@ -243,5 +256,18 @@ h4 {
 		.button.new-recycles::before {
 			@include icomoon('\e012');
 		}
+	}
+}
+
+/********************view.menu ****************/
+.menu-wrapper {
+	position: absolute;
+	width: 75%;
+	height: 100%;
+	left: 100%;
+	background-color: #333333;
+	transition: all $animation ease-in;
+	&.menu-active {
+		transform: translateX(-100%);
 	}
 }

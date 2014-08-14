@@ -1,20 +1,20 @@
 <!-- my recycles -->
-<div class="view my-recycles">
+<div class="view-wrapper my-recycles" ng-class="{'menu-active': view.menuActive}">		
 	<header>
 		<h2>my recycles	</h2>
-		<div class="menu"><i></i></div>
+		<div class="menu" ng-click="view.menuActive = !view.menuActive"><i></i></div>
 	</header>
 	<div class="main">
 			
 	</div>
 	<footer>
 		<div class="button exclusive-gifts" 
-		ng-click="setPage('exclusive')"></div>
+		ng-click="setPage('view.exclusive')"></div>
 		<div class="button my-recycles active"
-		ng-click="setPage('mine')"></div>
+		ng-click="setPage('view.mine')"></div>
 		<div class="button nearby-gifts"
-		ng-click="setPage('nearby')"></div>
+		ng-click="setPage('view.nearby')"></div>
 		<div class="button new-recycles"
-		ng-click="setPage('new')"></div>
+		ng-click="setPage('view.new')"></div>
 	</footer>
 </div>

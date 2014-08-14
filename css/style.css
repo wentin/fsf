@@ -159,13 +159,20 @@ h4 {
   border: solid 2px black;
   -webkit-box-shadow: inset 0 1px 0px rgba(255, 255, 255, 0.3);
   box-shadow: inset 0 1px 0px rgba(255, 255, 255, 0.3); }
-.view.exclusive-gifts {
+.view .view-wrapper {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  transition: all 0.3s ease-in; }
+.view .view-wrapper.menu-active {
+  transform: translateX(-75%); }
+.view .view-wrapper.exclusive-gifts {
   background-color: #ff0453; }
-.view.my-recycles {
+.view .view-wrapper.my-recycles {
   background-color: #03c796; }
-.view.nearby-gifts {
+.view .view-wrapper.nearby-gifts {
   background-color: #885e74; }
-.view.new-recycles {
+.view .view-wrapper.new-recycles {
   background-color: #ffc100; }
 .view header {
   height: 60px; }
@@ -274,3 +281,14 @@ h4 {
   /* Better Font Rendering =========== */
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale; }
+
+/********************view.menu ****************/
+.menu-wrapper {
+  position: absolute;
+  width: 75%;
+  height: 100%;
+  left: 100%;
+  background-color: #333333;
+  transition: all 0.3s ease-in; }
+.menu-wrapper.menu-active {
+  transform: translateX(-100%); }

@@ -49,6 +49,10 @@
 		};
 	});
 	
+	app.controller('ViewController', function($scope, $state){
+		this.menuActive = 0;
+	});
+
 	var mainViewData = {
 		exclusiveGifts: 1,
 		myRecycles: 2,
@@ -65,40 +69,39 @@
 				controllerAs: 'main'
 			})
 
-			.state('exclusive', {
-				url: '/exclusive-gifts',
-				templateUrl: 'templates/exclusive-gifts.html',
-				controller: 'MainController',
-				controllerAs: 'main'
+			.state('view', {
+				views: {
+		            '': { 
+						templateUrl: 'templates/view.html',
+						controller: 'ViewController',
+						controllerAs: 'view'
+		            },
+		            'menu@view': { 
+		                templateUrl: 'templates/menu.html',
+		                // controller: 'menuController'
+		            }
+		        }
 			})
 
-			.state('mine', {
+			.state('view.exclusive', {
+				url: '/exclusive-gifts',
+				templateUrl: 'templates/exclusive-gifts.html'
+			})
+			.state('view.mine', {
 				url: '/my-recycles',
 				templateUrl: 'templates/my-recycles.html',
-				controller: 'MainController',
-				controllerAs: 'main'
 			})
-
-			.state('nearby', {
+			.state('view.nearby', {
 				url: '/nearby-gifts',
-				templateUrl: 'templates/nearby-gifts.html',
-				controller: 'MainController',
-				controllerAs: 'main'
+				templateUrl: 'templates/nearby-gifts.html'
 			})
-
-
-			.state('new', {
+			.state('view.new', {
 				url: '/new-recycle',
-				templateUrl: 'templates/new-recycle.html',
-				controller: 'MainController',
-				controllerAs: 'main'
+				templateUrl: 'templates/new-recycle.html'
 			});
 
 		$urlRouterProvider.otherwise('/main');
 	})
 
-	.run(['$state', function ($state) {
-	   $state.transitionTo('exclusive');
-	}])
 
 })()
