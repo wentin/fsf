@@ -1,20 +1,24 @@
 <!-- exclusive gift -->
 <div class="view exclusive-gifts">
-	<header>
-		<h2>exclusive gifts</h2>
-		<div class="menu"><i></i></div>
-	</header>
-	<div class="main">
-		
+	<div class="viewWrapper">		
+		<header>
+			<h2>exclusive gifts</h2>
+			<div class="menu"><i></i></div>
+		</header>
+		<div class="main">
+			
+		</div>
+		<footer>
+			<div class="button exclusive-gifts active" 
+			ng-click="setPage('exclusive')"></div>
+			<div class="button my-recycles"
+			ng-click="setPage('mine')"></div>
+			<div class="button nearby-gifts"
+			ng-click="setPage('nearby')"></div>
+			<div class="button new-recycles"
+			ng-click="setPage('new')"></div>
+		</footer>
 	</div>
-	<footer>
-		<div class="button exclusive-gifts active" 
-		ng-click="setPage('exclusive')"></div>
-		<div class="button my-recycles"
-		ng-click="setPage('mine')"></div>
-		<div class="button nearby-gifts"
-		ng-click="setPage('nearby')"></div>
-		<div class="button new-recycles"
-		ng-click="setPage('new')"></div>
-	</footer>
+    <div ui-view="menu">
+    </div>
 </div>
