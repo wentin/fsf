@@ -1,5 +1,5 @@
 (function(){
-	var app = angular.module('fsf', ['ui.router']);
+	var app = angular.module('fsf', ['ui.router', 'fsf.NearbyController']);
 	app.controller('MainController', function($scope, $state){
 		this.data = mainViewData;
 
@@ -47,12 +47,18 @@
 		$scope.setPage = function (page) {
 		    $state.transitionTo(page);
 		};
+
+		setTimeout(function(){
+			// Hide the address bar!
+			window.scrollTo(0, 1);
+		}, 0);
 	});
 	
 	app.controller('ViewController', function($scope, $state){
 		this.menuActive = 0;
 	});
 
+	
 	var mainViewData = {
 		exclusiveGifts: 1,
 		myRecycles: 2,
@@ -93,7 +99,9 @@
 			})
 			.state('view.nearby', {
 				url: '/nearby-gifts',
-				templateUrl: 'templates/nearby-gifts.html'
+				templateUrl: 'templates/nearby-gifts.html',
+				controller: 'NearbyController',
+				// controllerAs: 'nearby'
 			})
 			.state('view.new', {
 				url: '/new-recycle',

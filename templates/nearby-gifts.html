@@ -1,5 +1,5 @@
 <!-- nearby-gifts.html -->
-<div class="view-wrapper nearby-gifts" ng-class="{'menu-active': view.menuActive}">		
+<div class="view-wrapper nearby-gifts" ng-class="{'menu-active': view.menuActive}">
 	<header>
 		<h2>nearby gifts</h2>
 		<div class="menu" 
@@ -7,15 +7,16 @@
 			ng-click="view.menuActive = !view.menuActive"><i></i></div>
 	</header>
 	<div class="main">
-			
+		
+		<div id="activity-map"></div>
 	</div>
 	<footer>
 		<div class="button exclusive-gifts" 
 		ng-click="setPage('view.exclusive')"></div>
-		<div class="button my-recycles"
-		ng-click="setPage('view.mine')"></div>
 		<div class="button nearby-gifts active"
 		ng-click="setPage('view.nearby')"></div>
+		<div class="button my-recycles"
+		ng-click="setPage('view.mine')"></div>
 		<div class="button new-recycles"
 		ng-click="setPage('view.new')"></div>
 	</footer>
