@@ -191,7 +191,28 @@ h4 {
   font-weight: 900;
   font-size: 24px;
   line-height: 60px;
-  padding-left: 20px; }
+  margin-left: 40px;
+  margin-right: 60px;
+  cursor: pointer; }
+.view header h2::before {
+  content: "\f196";
+  font-family: 'icomoon';
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  position: absolute;
+  left: 0;
+  top: 0;
+  font-size: 32px;
+  height: 60px;
+  width: 40px;
+  line-height: 60px;
+  text-align: center; }
 .view header .menu {
   position: absolute;
   top: 0;

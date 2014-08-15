@@ -1,13 +1,13 @@
 angular.module('fsf.NearbyController', ['fsf.NearbyMapService'])
 .controller('NearbyController', 
 	function($scope, $state, $stateParams, $http, $q){
-       	var mapStyles = $http.get("js/map.json"),
-		    data = $http.get("js/data.json");
+   	var mapStyles = $http.get("js/map.json"),
+        data      = $http.get("js/data.json");
 		
 		$q.all([mapStyles, data]).then(function(res) { 
-      		this.mapStyles = res[0].data;
-      		this.data = res[1].data;
-      		init();   
+  		this.mapStyles = res[0].data;
+  		this.data = res[1].data;
+  		init();
 		});
 
 		function init() {
@@ -23,59 +23,59 @@ angular.module('fsf.NearbyController', ['fsf.NearbyMapService'])
             var data = this.data;
 
             var addPoints = function(from, to, img) {
-                var transactionCoordinates = [
-                    new google.maps.LatLng(from.lat, from.lng),
-                    new google.maps.LatLng(to.lat, to.lng)
-                	];
+              var transactionCoordinates = [
+                new google.maps.LatLng(from.lat, from.lng),
+                new google.maps.LatLng(to.lat, to.lng)
+            	];
 
-                var path = new google.maps.Polyline({
-                    path: transactionCoordinates,
-                    geodesic: true,
+              var path = new google.maps.Polyline({
+                  path: transactionCoordinates,
+                  geodesic: true,
+                  strokeColor: '#FF0453',
+                  strokeOpacity: 1.0,
+                  strokeWeight: 2
+              });
+
+              path.setMap(map);
+
+              var fromMarker = new google.maps.Marker({
+                  position:  new google.maps.LatLng(from.lat, from.lng),
+                  icon: {
+                    path: google.maps.SymbolPath.CIRCLE,
                     strokeColor: '#FF0453',
-                    strokeOpacity: 1.0,
-                    strokeWeight: 2
-                });
+                    strokeOpacity: 1,
+                    strokeWeight: 2,
+                    fillColor: '#ffffff',
+                    fillOpacity: 1,
+                    scale: 10
+                  },
+                  draggable: false,
+                  map: map
+              });
 
-                path.setMap(map);
+              var toMarker = new google.maps.Marker({
+                  position:  new google.maps.LatLng(to.lat, to.lng),
+                  icon: {
+                    path: google.maps.SymbolPath.CIRCLE,
+                    strokeColor: '#FF0453',
+                    strokeOpacity: 1,
+                    strokeWeight: 2,
+                    fillColor: '#FF0453',
+                    fillOpacity: 1,
+                    scale: 10
+                  },
+                  draggable: false,
+                  map: map,
+                  title: 'Received'
+              });
 
-                var fromMarker = new google.maps.Marker({
-                    position:  new google.maps.LatLng(from.lat, from.lng),
-                    icon: {
-                      path: google.maps.SymbolPath.CIRCLE,
-                      strokeColor: '#FF0453',
-                      strokeOpacity: 1,
-                      strokeWeight: 2,
-                      fillColor: '#ffffff',
-                      fillOpacity: 1,
-                      scale: 10
-                    },
-                    draggable: false,
-                    map: map
-                });
+              var infowindow = new google.maps.InfoWindow({
+                  content: '<img src="'+img+'">'
+              });
 
-                var toMarker = new google.maps.Marker({
-                    position:  new google.maps.LatLng(to.lat, to.lng),
-                    icon: {
-                      path: google.maps.SymbolPath.CIRCLE,
-                      strokeColor: '#FF0453',
-                      strokeOpacity: 1,
-                      strokeWeight: 2,
-                      fillColor: '#FF0453',
-                      fillOpacity: 1,
-                      scale: 10
-                    },
-                    draggable: false,
-                    map: map,
-                    title: 'Received'
-                });
-
-                var infowindow = new google.maps.InfoWindow({
-                    content: '<img src="'+img+'">'
-                });
-
-                google.maps.event.addListener(toMarker, 'click', function() {
-                  infowindow.open(map,toMarker);
-                });
+              google.maps.event.addListener(toMarker, 'click', function() {
+                infowindow.open(map,toMarker);
+              });
             }
             
             for (var i = 0; i < data.length; i++) {

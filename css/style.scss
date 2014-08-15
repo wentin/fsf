@@ -192,7 +192,20 @@ h4 {
 			font-weight: 900;
 			font-size: 24px;
 			line-height: $headerHeight;
-			padding-left: 20px;
+			margin-left: $headerHeight*2/3;
+			margin-right: $headerHeight;
+			cursor: pointer;
+		}
+		h2::before {
+			@include icomoon('\f196');
+			position: absolute;
+			left: 0;
+			top: 0;
+			font-size: 32px;
+			height: $headerHeight;
+			width: $headerHeight*2/3;
+			line-height: $headerHeight;
+			text-align: center;
 		}
 		.menu {
 			position: absolute;
