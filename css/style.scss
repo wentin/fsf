@@ -1,4 +1,5 @@
 $font:'Lato', sans-serif;
+$font-cond:'Open Sans Condensed', sans-serif;
 $red: #FF0453;
 $yellow: #FFC100;
 $purple: #885E74;
@@ -214,6 +215,14 @@ h4 {
 			width: $headerHeight;
 			height:  $headerHeight;
 			cursor: pointer;
+			/* &:hover {
+				i::before {
+					top: -11px;
+				}
+				i::after {
+					top: 11px;
+				}
+			} */
 			i {
 				position: absolute;
 				width: 24px;
@@ -230,7 +239,7 @@ h4 {
 				position: absolute;
 				width: 24px;
 				height: 4px;
-				top: -10px;
+				top: -9px;
 				background-color: #ffffff;
 				-webkit-transition: all $animation ease-in;
 				-o-transition: all $animation ease-in;
@@ -241,7 +250,7 @@ h4 {
 				position: absolute;
 				width: 24px;
 				height: 4px;
-				top: 10px;
+				top: 9px;
 				background-color: #ffffff;
 				-webkit-transition: all $animation ease-in;
 				-o-transition: all $animation ease-in;
@@ -275,7 +284,30 @@ h4 {
 		bottom: $footerHeight;
 		left: 0;
 		right: 0;
+		overflow-y: auto;
+		overflow-x: hidden;
 		background-color: rgba(0,0,0,0.2);
+		.gift-wrapper {
+			.gift {
+				h1 {
+					font-size: 20px;
+					font-weight: 300;
+					a {
+						font-family: $font-cond;
+						color: $yellow;
+						background-color: rgba(0,0,0,0.2);
+						border-radius: 6px;
+						padding: 0 5px;
+						line-height: 40px;
+					}
+				}
+				.gallery {
+					img {
+
+					}
+				}
+			}
+		}
 	}
 	footer {
 		position: absolute;

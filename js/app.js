@@ -44,6 +44,20 @@
 		    }
 		});*/
 
+		var gallery = $('.swiper-container').swiper({
+			slidesPerView:'auto',
+			watchActiveIndex: true,
+			centeredSlides: true,
+			pagination:'.pagination',
+			paginationClickable: true,
+			resizeReInit: true,
+			keyboardControl: true,
+			grabCursor: true,
+			onImagesReady: function(){
+				changeSize()
+			}
+		})
+			
 		$scope.setPage = function (page) {
 		    $state.transitionTo(page);
 		};
