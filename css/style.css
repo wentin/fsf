@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @font-face {
   font-family: 'icomoon';
   src: url("../fonts/icomoon.eot?l5ockb");
@@ -46,7 +47,7 @@ h4 {
 #one {
   left: 0;
   top: 0;
-  background-color: #ff0453;
+  background-color: #FF0453;
   -webkit-transform-origin: 0% 0%;
   -moz-transform-origin: 0% 0%;
   -ms-transform-origin: 0% 0%;
@@ -56,7 +57,7 @@ h4 {
 #two {
   right: 0;
   top: 0;
-  background-color: #03c796;
+  background-color: #03C796;
   -webkit-transform-origin: 100% 0%;
   -moz-transform-origin: 100% 0%;
   -ms-transform-origin: 100% 0%;
@@ -66,7 +67,7 @@ h4 {
 #three {
   left: 0;
   bottom: 0;
-  background-color: #885e74;
+  background-color: #885E74;
   -webkit-transform-origin: 0% 100%;
   -moz-transform-origin: 0% 100%;
   -ms-transform-origin: 0% 100%;
@@ -76,7 +77,7 @@ h4 {
 #four {
   right: 0;
   bottom: 0;
-  background-color: #ffc100;
+  background-color: #FFC100;
   -webkit-transform-origin: 100% 100%;
   -moz-transform-origin: 100% 100%;
   -ms-transform-origin: 100% 100%;
@@ -95,7 +96,7 @@ h4 {
   margin-top: 60px; }
 
 .main-block.exclusive-gifts h1::before {
-  content: "\e017";
+  content: "";
   font-family: 'icomoon';
   speak: none;
   font-style: normal;
@@ -110,7 +111,7 @@ h4 {
   display: block; }
 
 .main-block.my-recycles h1::before {
-  content: "\e03e";
+  content: "";
   font-family: 'icomoon';
   speak: none;
   font-style: normal;
@@ -125,7 +126,7 @@ h4 {
   display: block; }
 
 .main-block.nearby-gifts h1::before {
-  content: "\e025";
+  content: "";
   font-family: 'icomoon';
   speak: none;
   font-style: normal;
@@ -140,7 +141,7 @@ h4 {
   display: block; }
 
 .main-block.new-recycles h1::before {
-  content: "\e012";
+  content: "";
   font-family: 'icomoon';
   speak: none;
   font-style: normal;
@@ -162,180 +163,200 @@ h4 {
   box-sizing: border-box;
   position: absolute;
   border: solid 2px black; }
-.view .view-wrapper {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  border-radius: 8px;
-  -webkit-box-shadow: inset 0 1px 0px rgba(255, 255, 255, 0.6);
-  box-shadow: inset 0 1px 0px rgba(255, 255, 255, 0.6);
-  -webkit-transition: all 0.3s ease-in;
-  -o-transition: all 0.3s ease-in;
-  transition: all 0.3s ease-in; }
-.view .view-wrapper.menu-active {
-  -webkit-transform: translateX(-75%);
-  -ms-transform: translateX(-75%);
-  -o-transform: translateX(-75%);
-  transform: translateX(-75%); }
-.view .view-wrapper.exclusive-gifts {
-  background-color: #ff0453; }
-.view .view-wrapper.my-recycles {
-  background-color: #03c796; }
-.view .view-wrapper.nearby-gifts {
-  background-color: #885e74; }
-.view .view-wrapper.new-recycles {
-  background-color: #ffc100; }
-.view header {
-  height: 60px; }
-.view header h2 {
-  font-weight: 900;
-  font-size: 24px;
-  line-height: 60px;
-  margin-left: 40px;
-  margin-right: 60px;
-  cursor: pointer; }
-.view header h2::before {
-  content: "\f196";
-  font-family: 'icomoon';
-  speak: none;
-  font-style: normal;
-  font-weight: normal;
-  font-variant: normal;
-  text-transform: none;
-  /* Better Font Rendering =========== */
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  position: absolute;
-  left: 0;
-  top: 0;
-  font-size: 32px;
-  height: 60px;
-  width: 40px;
-  line-height: 60px;
-  text-align: center; }
-.view header .menu {
-  position: absolute;
-  top: 0;
-  right: 0;
-  width: 60px;
-  height: 60px;
-  cursor: pointer; }
-.view header .menu i {
-  position: absolute;
-  width: 24px;
-  height: 4px;
-  top: 28px;
-  right: 16px;
-  background-color: #ffffff;
-  -webkit-transition: all 0.3s ease-in;
-  -o-transition: all 0.3s ease-in;
-  transition: all 0.3s ease-in; }
-.view header .menu i::before {
-  content: '';
-  position: absolute;
-  width: 24px;
-  height: 4px;
-  top: -10px;
-  background-color: #ffffff;
-  -webkit-transition: all 0.3s ease-in;
-  -o-transition: all 0.3s ease-in;
-  transition: all 0.3s ease-in; }
-.view header .menu i::after {
-  content: '';
-  position: absolute;
-  width: 24px;
-  height: 4px;
-  top: 10px;
-  background-color: #ffffff;
-  -webkit-transition: all 0.3s ease-in;
-  -o-transition: all 0.3s ease-in;
-  transition: all 0.3s ease-in; }
-.view header .menu.menu-active i {
-  background-color: rgba(255, 255, 255, 0); }
-.view header .menu.menu-active i::before {
-  top: 0;
-  -webkit-transform: rotate(45deg);
-  -ms-transform: rotate(45deg);
-  -o-transform: rotate(45deg);
-  transform: rotate(45deg); }
-.view header .menu.menu-active i::after {
-  top: 0;
-  -webkit-transform: rotate(-45deg);
-  -ms-transform: rotate(-45deg);
-  -o-transform: rotate(-45deg);
-  transform: rotate(-45deg); }
-.view .main {
-  position: absolute;
-  margin: 0;
-  top: 60px;
-  bottom: 60px;
-  left: 0;
-  right: 0;
-  background-color: rgba(0, 0, 0, 0.2); }
-.view footer {
-  position: absolute;
-  bottom: 0;
-  width: 100%; }
-.view footer .button {
-  width: 25%;
-  float: left;
-  height: 60px;
-  cursor: pointer; }
-.view footer .button::before {
-  font-size: 40px;
-  line-height: 60px;
-  text-align: center;
-  display: block;
-  -webkit-text-shadow: 0 0 8px rgba(255, 255, 255, 0.6);
-  -moz-text-shadow: 0 0 8px rgba(255, 255, 255, 0.6);
-  text-shadow: 0 0 8px rgba(255, 255, 255, 0.6);
-  opacity: 0.6; }
-.view footer .button.active::before {
-  opacity: 1; }
-.view footer .button.exclusive-gifts::before {
-  content: "\e017";
-  font-family: 'icomoon';
-  speak: none;
-  font-style: normal;
-  font-weight: normal;
-  font-variant: normal;
-  text-transform: none;
-  /* Better Font Rendering =========== */
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale; }
-.view footer .button.my-recycles::before {
-  content: "\e03e";
-  font-family: 'icomoon';
-  speak: none;
-  font-style: normal;
-  font-weight: normal;
-  font-variant: normal;
-  text-transform: none;
-  /* Better Font Rendering =========== */
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale; }
-.view footer .button.nearby-gifts::before {
-  content: "\e025";
-  font-family: 'icomoon';
-  speak: none;
-  font-style: normal;
-  font-weight: normal;
-  font-variant: normal;
-  text-transform: none;
-  /* Better Font Rendering =========== */
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale; }
-.view footer .button.new-recycles::before {
-  content: "\e012";
-  font-family: 'icomoon';
-  speak: none;
-  font-style: normal;
-  font-weight: normal;
-  font-variant: normal;
-  text-transform: none;
-  /* Better Font Rendering =========== */
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale; }
+  .view .view-wrapper {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 8px;
+    -webkit-box-shadow: inset 0 1px 0px rgba(255, 255, 255, 0.6);
+    box-shadow: inset 0 1px 0px rgba(255, 255, 255, 0.6);
+    -webkit-transition: all 0.3s ease-in;
+    -o-transition: all 0.3s ease-in;
+    transition: all 0.3s ease-in; }
+    .view .view-wrapper.menu-active {
+      -webkit-transform: translateX(-75%);
+      -ms-transform: translateX(-75%);
+      -o-transform: translateX(-75%);
+      transform: translateX(-75%); }
+    .view .view-wrapper.exclusive-gifts {
+      background-color: #FF0453; }
+    .view .view-wrapper.my-recycles {
+      background-color: #03C796; }
+    .view .view-wrapper.nearby-gifts {
+      background-color: #885E74; }
+    .view .view-wrapper.new-recycles {
+      background-color: #FFC100; }
+  .view header {
+    height: 60px; }
+    .view header h2 {
+      font-weight: 900;
+      font-size: 24px;
+      line-height: 60px;
+      margin-left: 40px;
+      margin-right: 60px;
+      cursor: pointer; }
+    .view header h2::before {
+      content: "";
+      font-family: 'icomoon';
+      speak: none;
+      font-style: normal;
+      font-weight: normal;
+      font-variant: normal;
+      text-transform: none;
+      /* Better Font Rendering =========== */
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      position: absolute;
+      left: 0;
+      top: 0;
+      font-size: 32px;
+      height: 60px;
+      width: 40px;
+      line-height: 60px;
+      text-align: center; }
+    .view header .menu {
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 60px;
+      height: 60px;
+      cursor: pointer;
+      /* &:hover {
+      	i::before {
+      		top: -11px;
+      	}
+      	i::after {
+      		top: 11px;
+      	}
+      } */ }
+      .view header .menu i {
+        position: absolute;
+        width: 24px;
+        height: 4px;
+        top: 28px;
+        right: 16px;
+        background-color: #ffffff;
+        -webkit-transition: all 0.3s ease-in;
+        -o-transition: all 0.3s ease-in;
+        transition: all 0.3s ease-in; }
+      .view header .menu i::before {
+        content: '';
+        position: absolute;
+        width: 24px;
+        height: 4px;
+        top: -9px;
+        background-color: #ffffff;
+        -webkit-transition: all 0.3s ease-in;
+        -o-transition: all 0.3s ease-in;
+        transition: all 0.3s ease-in; }
+      .view header .menu i::after {
+        content: '';
+        position: absolute;
+        width: 24px;
+        height: 4px;
+        top: 9px;
+        background-color: #ffffff;
+        -webkit-transition: all 0.3s ease-in;
+        -o-transition: all 0.3s ease-in;
+        transition: all 0.3s ease-in; }
+    .view header .menu.menu-active i {
+      background-color: rgba(255, 255, 255, 0); }
+    .view header .menu.menu-active i::before {
+      top: 0;
+      -webkit-transform: rotate(45deg);
+      -ms-transform: rotate(45deg);
+      -o-transform: rotate(45deg);
+      transform: rotate(45deg); }
+    .view header .menu.menu-active i::after {
+      top: 0;
+      -webkit-transform: rotate(-45deg);
+      -ms-transform: rotate(-45deg);
+      -o-transform: rotate(-45deg);
+      transform: rotate(-45deg); }
+  .view .main {
+    position: absolute;
+    margin: 0;
+    top: 60px;
+    bottom: 60px;
+    left: 0;
+    right: 0;
+    overflow-y: auto;
+    overflow-x: hidden;
+    background-color: rgba(0, 0, 0, 0.2); }
+    .view .main .gift-wrapper .gift h1 {
+      font-size: 20px;
+      font-weight: 300; }
+      .view .main .gift-wrapper .gift h1 a {
+        font-family: "Open Sans Condensed", sans-serif;
+        color: #FFC100;
+        background-color: rgba(0, 0, 0, 0.2);
+        border-radius: 6px;
+        padding: 0 5px;
+        line-height: 40px; }
+  .view footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%; }
+    .view footer .button {
+      width: 25%;
+      float: left;
+      height: 60px;
+      cursor: pointer; }
+    .view footer .button::before {
+      font-size: 40px;
+      line-height: 60px;
+      text-align: center;
+      display: block;
+      -webkit-text-shadow: 0 0 8px rgba(255, 255, 255, 0.6);
+      -moz-text-shadow: 0 0 8px rgba(255, 255, 255, 0.6);
+      text-shadow: 0 0 8px rgba(255, 255, 255, 0.6);
+      opacity: 0.6; }
+    .view footer .button.active::before {
+      opacity: 1; }
+    .view footer .button.exclusive-gifts::before {
+      content: "";
+      font-family: 'icomoon';
+      speak: none;
+      font-style: normal;
+      font-weight: normal;
+      font-variant: normal;
+      text-transform: none;
+      /* Better Font Rendering =========== */
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale; }
+    .view footer .button.my-recycles::before {
+      content: "";
+      font-family: 'icomoon';
+      speak: none;
+      font-style: normal;
+      font-weight: normal;
+      font-variant: normal;
+      text-transform: none;
+      /* Better Font Rendering =========== */
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale; }
+    .view footer .button.nearby-gifts::before {
+      content: "";
+      font-family: 'icomoon';
+      speak: none;
+      font-style: normal;
+      font-weight: normal;
+      font-variant: normal;
+      text-transform: none;
+      /* Better Font Rendering =========== */
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale; }
+    .view footer .button.new-recycles::before {
+      content: "";
+      font-family: 'icomoon';
+      speak: none;
+      font-style: normal;
+      font-weight: normal;
+      font-variant: normal;
+      text-transform: none;
+      /* Better Font Rendering =========== */
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale; }
 
 #activity-map {
   position: absolute;
@@ -355,8 +376,10 @@ h4 {
   padding: 0 20px;
   box-sizing: border-box;
   transition: all 0.3s ease-in; }
-.menu-wrapper.menu-active {
-  -webkit-transform: translateX(-100%);
-  -ms-transform: translateX(-100%);
-  -o-transform: translateX(-100%);
-  transform: translateX(-100%); }
+  .menu-wrapper.menu-active {
+    -webkit-transform: translateX(-100%);
+    -ms-transform: translateX(-100%);
+    -o-transform: translateX(-100%);
+    transform: translateX(-100%); }
+
+/*# sourceMappingURL=style.css.map */
